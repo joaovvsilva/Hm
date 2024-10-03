@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Header</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 <body>
     <header>
         <section class="logo">
-          <a href="index.html"><img src="{{ url_for('static', filename='/images/LOGO.png') }}"  alt="LOGO"></a>
+          <a href="{{ url_for('home') }}"><pythonimg src="{{ url_for('static', filename='/images/LOGO.png') }}"  alt="LOGO"></a>
         </section>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="trabalhos.html">Trabalhos</a></li>
-                <li><a href="serviços.html">Projetos</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+              <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('trabalhos') }}">Trabalhos</a></li>
+                <li><a href="{{ url_for('servicos') }}">Projetos</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+            </ul>
+            
             </ul>
         </nav>
-        <button class="contact-btn">Contato</button>
+        <a href="{{ url_for('contato') }}"><button class="contact-btn">Contato</button></a>
     </header>
     <main>
       <section class="topo">
