@@ -123,7 +123,7 @@ nav ul li a:hover {
 .icon {
   width: 50px;
   height: 50px;
-  fill: black;
+  fill: white;
   transition: fill 0.3s;
 }
 
